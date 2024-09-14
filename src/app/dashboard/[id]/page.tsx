@@ -14,7 +14,6 @@ export default function RecordPage({ params }: { params: { id: string } }) {
     dispatch(getPokemon({ id: params.id }))
   }, [dispatch, params.id])
   
-
   if (loading) return <Typography align="center">Loading...</Typography>;
 
   if (error) return <Typography color="error" align="center">{error}</Typography>;
